@@ -7,7 +7,7 @@
        			 "<enter>",
        			 "<wait1>",
        			 "<enter>",
-       			 "<wait15>",
+       			 "<wait20>",
        			 "cl-install -S none -l ru_RU -f",
        			 "<enter>",
        			 "<wait3>",
