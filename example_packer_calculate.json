@@ -3,36 +3,36 @@
     {
       "accelerator": "kvm",
       "boot_command": [
-        "<wait1>",
-        "<enter>",
-        "<wait1>",
-        "<enter>",
-        "<wait15>",
-        "cl-install -S none -l ru_RU -f",
-        "<enter>",
-        "<wait3>",
-        "Msirenie12",
-        "<enter>",
-        "<wait1>",
-        "Msirenie12",
-        "<enter>",
-        "<wait100s>",
-        "reboot",
-        "<enter>",
-        "<wait20>",
-        "<enter>",
-        "<wait1>",
-        "<enter>",
-        "<wait8>",
-        "root",
-        "<wait1>",
-        "Msirenie12",
-        "<enter>",
-        "<wait1>",
-        "<enter>",
-        "/etc/init.d/sshd restart",
-        "<enter>",
-        "<wait1>"
+       			 "<wait1>",
+       			 "<enter>",
+       			 "<wait1>",
+       			 "<enter>",
+       			 "<wait15>",
+       			 "cl-install -S none -l ru_RU -f",
+       			 "<enter>",
+       			 "<wait3>",
+       			 "{{ user `user` }}",
+       			 "<enter>",
+       			 "<wait1>",
+       			 "{{ user `user` }}",
+       			 "<enter>",
+       			 "<wait100s>",
+       			 "reboot",
+       			 "<enter>",
+       			 "<wait20>",
+       			 "<enter>",
+       			 "<wait1>",
+       			 "<enter>",
+       			 "<wait8>",
+       			 "{{ user `user` }}",
+       			 "<wait1>",
+       			 "{{ user `password` }}",
+       			 "<enter>",
+       			 "<wait1>",
+       			 "<enter>",
+       			 "/etc/init.d/sshd restart",
+       			 "<enter>",
+       			 "<wait1>"
       ],
       "boot_wait": "1s",
       "disk_size": "{{ user `disk_size` }}",
@@ -45,24 +45,24 @@
       "name": "calculate",
       "shutdown_command": "poweroff",
       "ssh_password": "Msirenie12",
-      "ssh_timeout": "60m",
+      "ssh_timeout": "20m",
       "ssh_username": "root",
       "type": "qemu"
     }
   ],
   "provisioners": [
     {
-      "execute_command": "bash '{{ .Path }}'",
-   "scripts": [
+      	"type": "shell",
+      	"execute_command": "bash '{{ .Path }}'",
+   		"scripts": [
                 "scripts/vagrant.sh"
-    ],
-      "type": "shell"
-    }
+    ]
+}
   ],
   "variables": {
     "disk_size": "9000",
     "domain": "calculate.local",
-    "password": "Msirenie",
+    "password": "Msirenie12",
     "user": "root"
   }
 }
