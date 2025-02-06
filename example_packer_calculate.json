@@ -16,7 +16,7 @@
        			 "<wait1>",
        			 "{{ user `user` }}",
        			 "<enter>",
-       			 "<wait100s>",
+       			 "<wait50s>",
        			 "reboot",
        			 "<enter>",
        			 "<wait20>",
