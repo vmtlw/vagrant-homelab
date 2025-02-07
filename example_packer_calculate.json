@@ -25,6 +25,7 @@
        			 "<enter>",
        			 "<wait8>",
        			 "{{ user `user` }}",
+             "<enter>",
        			 "<wait1>",
        			 "{{ user `password` }}",
        			 "<enter>",
