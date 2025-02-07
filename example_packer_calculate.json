@@ -11,10 +11,10 @@
        			 "cl-install -S none -l ru_RU -f",
        			 "<enter>",
        			 "<wait3>",
-       			 "{{ user `user` }}",
+       			 "{{ user `password` }}",
        			 "<enter>",
        			 "<wait1>",
-       			 "{{ user `user` }}",
+       			 "{{ user `password` }}",
        			 "<enter>",
        			 "<wait50s>",
        			 "reboot",
@@ -44,7 +44,7 @@
       "iso_url": "https://mirror.calculate-linux.org/release/20250206/css-20250206-x86_64.iso",
       "name": "calculate",
       "shutdown_command": "poweroff",
-      "ssh_password": "Msirenie12",
+      "ssh_password": "{{ user `password` }}",
       "ssh_timeout": "20m",
       "ssh_username": "root",
       "type": "qemu"
@@ -62,7 +62,7 @@
   "variables": {
     "disk_size": "9000",
     "domain": "calculate.local",
-    "password": "Msirenie12",
+    "password": "root",
     "user": "root"
   }
 }
