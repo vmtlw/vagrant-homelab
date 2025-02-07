@@ -46,7 +46,7 @@
       "shutdown_command": "poweroff",
       "ssh_password": "{{ user `password` }}",
       "ssh_timeout": "20m",
-      "ssh_username": "root",
+      "ssh_username": "{{ user `user` }}",
       "type": "qemu"
     }
   ],
