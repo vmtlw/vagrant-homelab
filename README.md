@@ -8,5 +8,4 @@ mkdir -p http && packer build example_packer_calculate.json
 wget https://raw.githubusercontent.com/vagrant-libvirt/vagrant-libvirt/refs/heads/main/tools/create_box.sh
 ./create_box.sh IMAGE [BOX] [Vagrantfile.add]
 vagrant up --provider=libvirt
-
 ```
